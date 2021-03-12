@@ -2,6 +2,13 @@ from divvy import db, app
 from flask import Flask, jsonify, request
 from divvy.models import Divvy
 
+# REST API request is as follows:
+# GET request
+# {
+#     "start_time":'your start time'
+#     "end_time":'your end time'
+# }
+
 @app.route('/average',methods= ['GET'])
 def get_average():
     data = request.get_json()
